@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 0.0.0.0",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint src"
@@ -27,7 +27,10 @@
     "trailingComma": "all"
   },
   "eslintConfig": {
-    "extends": ["@strictmode/eslint-config"],
+    "extends": [
+      "@strictmode/eslint-config",
+      "plugin:react/jsx-runtime"
+    ],
     "parserOptions": {
       "project": "tsconfig.json"
     },
@@ -35,7 +38,7 @@
       "unicorn/filename-case": [
         "error",
         {
-          "case": "camelCase"
+          "case": "pascalCase"
         }
       ]
     }
