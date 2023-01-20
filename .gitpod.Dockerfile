@@ -5,3 +5,5 @@ RUN bash -c 'VERSION="18.12.1" \
     && nvm use $VERSION && nvm alias default $VERSION'
 
 RUN echo "nvm use default &>/dev/null" >> ~/.bashrc.d/51-nvm-fix
+
+ENV SHELL=/usr/bin/zsh
